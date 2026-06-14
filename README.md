@@ -53,10 +53,10 @@ To ensure the model is robust and deployable in production (out-of-sample data),
 * **Quarantine Experiment (`F3908`)**: Excluded from Model A (clean) but benchmarked in Model B to evaluate predictive inflation.
 
 ### 4. Feature Engineering
-* **Categorical Risk Weighting**: Encoded mule rates for account type (`F3886`), employment type (`F3891`), and geography (`F3890`).
-* **Balance Transformations**: Extracted log-absolute scales and sign flags for the raw balance feature `F3836`.
-* **Missingness Signals**: Engineered flags for missing indices (e.g., `F3043_missing`) since omission itself correlates with fraud.
-* **Interactions**: Created composite features like `risk_student_rural` (highly predictive).
+* **Categorical Risk Weighting**: Encoded mule rates for raw categorical features `F3886`, `F3891`, and `F3890`.
+* **Balance Transformations**: Extracted log-absolute scales and sign flags for raw feature `F3836`.
+* **Missingness Signals**: Engineered flags for missing indices (e.g., `F3043_missing`).
+* **Interactions**: Created composite features (e.g., combining high-risk categories of `F3891` and `F3890`).
 
 ### 5. Multi-Stage Feature Selection
 1. **Variance Filter**: Drops features with variance $< 0.01$.
