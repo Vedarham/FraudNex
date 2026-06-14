@@ -1,0 +1,35 @@
+# Python virtual environment
+.venv/
+venv/
+ENV/
+env/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Large dataset files, serialized models, and generated plots
+*.csv
+*.xlsx
+*.pkl
+*.png
+*backup.ipynb
+assets/model/feature_list_model_a.txt
+
+# Compiled/output extensions
+*.so
+*.dylib
+*.dll
+*.pyd
+
+# Optuna databases (if saved locally)
+*.db
+
+# Operating System files
+.DS_Store
+Thumbs.db
